@@ -41,7 +41,7 @@ function PreSaleMint() {
         alert("Quantity not set.");
       } else {
         axios
-          .post("https://18.224.6.245:5000/check-address", { address: address })
+          .post("http://18.224.6.245:5000/check-address", { address: address })
           .then(async (response) => {
             console.log(response.data);
             if (response.data === true) {

@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
   res.send('Ok')
 })
 
-app.post("https://18.224.6.245:5000/check-address", function (req, res) {
+app.post("http://18.224.6.245:5000/check-address", function (req, res) {
   let address = req.body.address;
   if (whitelistArray.includes(address.toLowerCase())) {
     res.send(true);
