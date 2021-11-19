@@ -41,7 +41,7 @@ function PreSaleMint() {
         alert("Quantity not set.");
       } else {
         axios
-          .post("/check-address", { address: address })
+          .post("https://imx-backend.herokuapp.com/check-address", { address: address })
           .then(async (response) => {
             console.log(response.data);
             if (response.data === true) {
